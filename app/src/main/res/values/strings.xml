@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">RecyclerViewLearn</string>
+
+    <!-- MainActivity -->
+    <string name="main_manager_learn">LayoutManager学习</string>
+    <string name="main_item_decoration_learn">ItemDecoration学习</string>
+    <string name="main_more_item">复杂且多item实现</string>
+    <string name="main_slide_item">滑动item</string>
+    <string name="main_radio_and_check">多选、单选</string>
+    <string name="main_refresh">下拉和上拉刷新</string>
+    <string name="main_item_animation">item动画</string>
+
+    <!-- LayoutTypeActivity -->
+    <string name="type_linear_manager_text">线性(LinearLayoutManager)</string>
+    <string name="type_grid_manager_text">网格(GridLayoutManager)</string>
+    <string name="type_StaggeredGrid_manager_text">瀑布流(StaggeredGridLayoutManager)</string>
+    <string name="type_custom_manager">自定义LayoutManager</string>
+
+    <!-- common_manager.xml -->
+    <string name="btn_horizontal_text">横向</string>
+    <string name="btn_vertical_text">纵向</string>
 </resources>
