@@ -17,9 +17,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.LayoutTypeActivity"
+        <activity android:name=".activity.layoutManagerType.LayoutTypeActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".activity.layoutManagerType.LinearManagerActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.layoutManagerType.GridManagerActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.moreItem.MoreItemTypeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.moreItem.CopyAlipayIndexActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.moreItem.CopyAlipayFoodActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

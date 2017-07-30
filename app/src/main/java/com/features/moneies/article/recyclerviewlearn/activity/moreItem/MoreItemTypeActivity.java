@@ -1,8 +1,5 @@
-package com.features.moneies.article.recyclerviewlearn.activity;
+package com.features.moneies.article.recyclerviewlearn.activity.moreItem;
 
-/**
- * Created by loser's computer on 2017/7/28.
- */
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.features.moneies.article.recyclerviewlearn.R;
+import com.features.moneies.article.recyclerviewlearn.activity.layoutManagerType.GridManagerActivity;
+import com.features.moneies.article.recyclerviewlearn.activity.layoutManagerType.LinearManagerActivity;
 import com.features.moneies.article.recyclerviewlearn.adapter.MainAdapter;
 
 import java.util.ArrayList;
@@ -23,10 +22,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * recyclerView布局管理器的分类页
+ * 复杂且多item列表实现分类页
+ * Created by loser's computer on 2017/7/29.
  */
-public class LayoutTypeActivity extends AppCompatActivity {
-
+public class MoreItemTypeActivity extends AppCompatActivity{
     @BindView(R.id.toolbar_back)
     ImageView toolbarBack;
     @BindView(R.id.toolbar)
@@ -45,7 +44,7 @@ public class LayoutTypeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         toolbarBack.setOnClickListener(v -> this.finish());
-        toolbarTitle.setText(getString(R.string.main_manager_learn));
+        toolbarTitle.setText(getString(R.string.main_more_item));
 
         initRecycler();
         initData();
@@ -76,10 +75,9 @@ public class LayoutTypeActivity extends AppCompatActivity {
     private void initData() {
         String items[];
         items = new String[]{
-                getString(R.string.type_linear_manager_text),
-                getString(R.string.type_grid_manager_text),
-                getString(R.string.type_StaggeredGrid_manager_text),
-                getString(R.string.type_custom_manager),
+                getString(R.string.item_car_brand_text),
+                getString(R.string.item_Alipay_index_text),
+                getString(R.string.item_Alipay_food_text),
         };
 
         List<String> mData = new ArrayList<>();
@@ -99,19 +97,12 @@ public class LayoutTypeActivity extends AppCompatActivity {
         Intent intent = new Intent();
         switch (position) {
             case 0:
-
                 break;
             case 1:
+                intent.setClass(this,CopyAlipayIndexActivity.class);
                 break;
             case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
+                intent.setClass(this,CopyAlipayFoodActivity.class);
                 break;
             default:
                 break;

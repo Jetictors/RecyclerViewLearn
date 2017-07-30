@@ -19,4 +19,17 @@
     <!-- common_manager.xml -->
     <string name="btn_horizontal_text">横向</string>
     <string name="btn_vertical_text">纵向</string>
+    
+    <!-- MoreItemTypeActivity -->
+    <string name="item_car_brand_text">防选择汽车品牌页</string>
+    <string name="item_Alipay_index_text">防支付宝app首页</string>
+    <string name="item_Alipay_food_text">防支付宝app口碑页</string>
+
+    <!-- CopyAlipayIndexActivity -->
+    <string name="btn_search_text">扫一扫</string>
+    <string name="btn_alipay_text">付钱</string>
+    <string name="btn_get_money_text">收钱</string>
+    <string name="btn_cards_text">卡包</string>
+
+
 </resources>

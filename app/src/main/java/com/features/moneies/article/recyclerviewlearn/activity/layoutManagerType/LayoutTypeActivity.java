@@ -1,19 +1,19 @@
-package com.features.moneies.article.recyclerviewlearn.activity;
+package com.features.moneies.article.recyclerviewlearn.activity.layoutManagerType;
 
+/**
+ * Created by loser's computer on 2017/7/28.
+ */
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.features.moneies.article.recyclerviewlearn.R;
-import com.features.moneies.article.recyclerviewlearn.activity.layoutManagerType.LayoutTypeActivity;
-import com.features.moneies.article.recyclerviewlearn.activity.moreItem.MoreItemTypeActivity;
 import com.features.moneies.article.recyclerviewlearn.adapter.MainAdapter;
 
 import java.util.ArrayList;
@@ -22,12 +22,17 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * recyclerView布局管理器的分类页
+ */
+public class LayoutTypeActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar_back)
     ImageView toolbarBack;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.toolbar_title)
+    TextView toolbarTitle;
     @BindView(R.id.main_recycler_view)
     RecyclerView mainRecyclerView;
     private MainAdapter mAdapter;
@@ -39,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
-        toolbarBack.setVisibility(View.GONE);
+        toolbarBack.setOnClickListener(v -> this.finish());
+        toolbarTitle.setText(getString(R.string.main_manager_learn));
 
         initRecycler();
         initData();
@@ -49,21 +55,18 @@ public class MainActivity extends AppCompatActivity {
      * 初始化recyclerView
      */
     private void initRecycler() {
-        //初始化布局管理器
         LinearLayoutManager manager = new LinearLayoutManager(this);
-        //设置滑动方向
+
         manager.setOrientation(LinearLayoutManager.VERTICAL);
-        //给recyclerView设置布局管理器
         mainRecyclerView.setLayoutManager(manager);
 
         mAdapter = new MainAdapter(this);
         mainRecyclerView.setAdapter(mAdapter);
 
-        //添加分割线 此为系统提供的默认分割线
         mainRecyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
         if (null != mAdapter){
-            mAdapter.setOnItemClickListener(position -> jumpActivity(position));
+            mAdapter.setOnItemClickListener(position -> lanuchActivity(position));
         }
     }
 
@@ -73,16 +76,13 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         String items[];
         items = new String[]{
-               getString(R.string.main_manager_learn),
-               getString(R.string.main_item_decoration_learn),
-               getString(R.string.main_more_item),
-               getString(R.string.main_slide_item),
-               getString(R.string.main_radio_and_check),
-               getString(R.string.main_refresh),
-               getString(R.string.main_item_animation),
+                getString(R.string.type_linear_manager_text),
+                getString(R.string.type_grid_manager_text),
+                getString(R.string.type_StaggeredGrid_manager_text),
+                getString(R.string.type_custom_manager),
         };
 
-        List<String> mData = new  ArrayList<>();
+        List<String> mData = new ArrayList<>();
 
         for (int i = 0 ; i < items.length ; i++){
             mData.add(i,items[i]);
@@ -95,24 +95,20 @@ public class MainActivity extends AppCompatActivity {
      * 根据position跳转不同的页面
      * @param position
      */
-    private void jumpActivity(int position) {
+    private void lanuchActivity(int position) {
         Intent intent = new Intent();
         switch (position) {
             case 0:
-                intent.setClass(this,LayoutTypeActivity.class);
+                intent.setClass(this,LinearManagerActivity.class);
                 break;
             case 1:
+                intent.setClass(this,GridManagerActivity.class);
                 break;
             case 2:
-                intent.setClass(this, MoreItemTypeActivity.class);
+                intent.setClass(this,LinearManagerActivity.class);
                 break;
             case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
+                intent.setClass(this,LinearManagerActivity.class);
                 break;
             default:
                 break;
