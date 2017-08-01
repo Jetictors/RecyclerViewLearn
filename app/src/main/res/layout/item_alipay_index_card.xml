@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   仿支付宝首页 item项共用布局
+   支持：
+        1、蚂蚁宝卡
+        2、奖励金
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_other"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp">
+
+    <include layout="@layout/layout_alipay_common_title"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_launcher_round"
+        android:scaleType="fitXY"
+        android:layout_margin="12dp"/>
+
+    <include layout="@layout/layout_alipay_common_btn_two"/>
+
+</LinearLayout>

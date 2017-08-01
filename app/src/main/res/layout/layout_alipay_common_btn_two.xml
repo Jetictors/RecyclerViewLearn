@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    仿支付宝首页 item项内容下面的公共按钮布局
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="#eeeeee">
+
+    <TextView
+        android:id="@+id/common_two_btn_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/common_two_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/common_two_btn_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+</LinearLayout>

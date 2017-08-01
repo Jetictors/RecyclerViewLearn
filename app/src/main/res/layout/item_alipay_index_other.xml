@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   仿支付宝首页 item项共用布局
+   支持：
+        1、飞猪酒店
+        2、无线金城帝网
+        3、AR识花
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_other"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:background="@color/colorAccent">
+
+    <include layout="@layout/layout_alipay_common_title"/>
+
+    <include layout="@layout/layout_alipay_common_content_two"/>
+
+</LinearLayout>

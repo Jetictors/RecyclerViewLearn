@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    仿字符宝首页 item项公共内容布局 2
+    支持：
+        1、飞猪酒店
+        2、无线金城帝网
+        3、AR识花
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_round"
+        android:layout_marginRight="12dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/common_content_hint_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/common_content_hint_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:text="@string/app_name"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/common_content_hint_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:text="@string/app_name"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/alipay_common_btn_bg"
+            android:padding="6dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_round"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="12dp"/>
+
+</LinearLayout>
